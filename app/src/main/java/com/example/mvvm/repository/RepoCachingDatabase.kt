@@ -3,8 +3,9 @@ package com.example.mvvm.repository
 import android.util.Log
 import com.example.mvvm.data.User
 import com.example.mvvm.validation.ValidateCaching
+import javax.inject.Inject
 
-class RepoCachingDatabase {
+class RepoCachingDatabase @Inject constructor() {
     private val validateDatabase: ValidateCaching = ValidateCaching()
 
     fun insertUser(user: User) {
